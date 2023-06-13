@@ -2,9 +2,10 @@ import { useState } from "react"
 import postsData from "./posts.json"
 import "./App.css"
 import { PostsList } from "./components/PostsList"
-// import PostImage from "./components/PostImage"
+
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import { PostImage } from "./components/PostImage/PostImage"
 
 function App() {
   const [posts, setPosts] = useState(postsData)
@@ -46,8 +47,8 @@ function App() {
         button2="Log in"
       />
       <PostsList posts={posts} />
-      {/* <PostImage addImageSuccessful={handleImageSuccess} /> */}
-      <Footer/>
+      <PostImage addImage={handleImageSuccess} />
+      <Footer />
     </div>
   )
 }
